@@ -60,7 +60,7 @@ static void ghostChase()
     helper(38, 12, 40, elrs40);
     helper(36, 8, 48, elrs48);
     helper(34, 4, 56, elrs56);
-    helper(32, 0, 64, elrs64);
+    helper(32, 0, 64, titan64);
 #endif
 }
 #endif
@@ -120,7 +120,7 @@ void OLEDDisplay::displaySplashScreen()
         u8g2->drawXBM(48, 0, 32, 32, elrs32);
     else
 #endif
-        u8g2->drawXBM(32, 0, 64, 64, elrs64);
+        u8g2->drawXBM(32, 0, 64, 64, titan64);
 #endif
     u8g2->sendBuffer();
 }
@@ -143,7 +143,7 @@ void OLEDDisplay::displayIdleScreen(uint8_t changed, uint8_t rate_index, uint8_t
     else if (connectionState == noCrossfire)
     {
         drawCentered(15, "NO");
-        drawCentered(32, "HANDSET");
+        drawCentered(32, "RADIO");
     }
     else if (OPT_USE_OLED_SPI_SMALL)
     {
