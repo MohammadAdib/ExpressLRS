@@ -2,7 +2,7 @@
 #include "helpers.h"
 
 const char *Display::message_string[] = {
-    "ExpressLRS",
+    "TitanLRS",
     "[  Connected  ]",
     "[  ! Armed !  ]",
     "[  Mismatch!  ]"
@@ -61,7 +61,7 @@ static const char *rate_string[] = {
 static const char *power_string[] = {
     "10mW",
     "25mW",
-    "50mW",
+    "850mW",
     "100mW",
     "250mW",
     "500mW",

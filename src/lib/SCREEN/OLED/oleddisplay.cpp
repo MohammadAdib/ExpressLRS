@@ -154,14 +154,12 @@ void OLEDDisplay::displayIdleScreen(uint8_t changed, uint8_t rate_index, uint8_t
     }
     else
     {
-        u8g2->drawStr(0, 13, message_string[message_index]);
-        u8g2->drawStr(0, 45, getValue(STATE_PACKET, rate_index));
-        u8g2->drawStr(70, 45, getValue(STATE_TELEMETRY_CURR, ratio_index));
-        u8g2->drawStr(0, 60, power.c_str());
+        u8g2->drawXBM(-5, 0, 64, 64, titan64);
+        u8g2->drawStr(64, 13, message_string[message_index]);
+        u8g2->drawStr(64, 45, getValue(STATE_PACKET, rate_index));
+        u8g2->drawStr(64, 60, power.c_str());
         u8g2->setFont(u8g2_font_profont10_mr);
-        u8g2->drawStr(70, 56, "TLM");
-        u8g2->drawStr(0, 27, "Ver: ");
-        u8g2->drawStr(38, 27, version);
+        u8g2->drawStr(64, 27, version);
     }
     u8g2->sendBuffer();
 }

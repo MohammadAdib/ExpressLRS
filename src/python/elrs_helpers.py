@@ -13,19 +13,11 @@ def get_git_version():
     sha: the 6 character short sha for the current HEAD revison, falling back to
         VERSION file if not in a git repo
     """
-    ver = "ver.unknown"
+    ver = "Lite v1.0.0"
     sha = "000000"
 
     try:
         sha = git_cmd("rev-parse", "HEAD")
-        ver = git_cmd("rev-parse", "--abbrev-ref", "HEAD")
-        # failure here is acceptable, unnamed commits might not have a branch
-        # associated
-        try:
-            ver = re.sub(r".*/", "", git_cmd("describe",
-                         "--all", "--exact-match"))
-        except:
-            pass
     except:
         if os.path.exists("VERSION"):
             with open("VERSION") as _f:
