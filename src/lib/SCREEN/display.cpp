@@ -3,9 +3,9 @@
 
 const char *Display::message_string[] = {
     "TitanLRS",
-    "Connected",
-    "!Armed",
-    "Mismatch"
+    "Linked",
+    "!ARMED",
+    "MSMTCH"
 };
 
 const char *Display::main_menu_strings[][2] = {
