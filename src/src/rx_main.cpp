@@ -1325,6 +1325,9 @@ static void setupConfigAndPocCheck()
 
 static void setupTarget()
 {
+    pinMode(17, OUTPUT);
+    digitalWrite(17, HIGH);
+    
     if (GPIO_PIN_ANT_CTRL != UNDEF_PIN)
     {
         pinMode(GPIO_PIN_ANT_CTRL, OUTPUT);

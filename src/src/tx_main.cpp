@@ -1157,6 +1157,9 @@ static void setupSerial()
  ***/
 static void setupTarget()
 {
+    pinMode(17, OUTPUT);
+    digitalWrite(17, HIGH);
+    
 #if defined(TARGET_TX_FM30)
   pinMode(GPIO_PIN_UART3RX_INVERT, OUTPUT); // RX3 inverter (from radio)
   digitalWrite(GPIO_PIN_UART3RX_INVERT, LOW); // RX3 not inverted
